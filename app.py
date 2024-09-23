@@ -34,7 +34,7 @@ def reg():
     if request.method == 'POST' and form.validate():
         u_surname = form.u_surname.data
         u_name = form.u_name.data
-        u_patronymic = form.u_patrinymic.data
+        u_patronymic = form.u_patronymic.data
         email = form.email.data
         passw = form.passw.data
         user = User(u_surname=u_surname, u_name=u_name, u_patronymic=u_patronymic, email=email, passw=passw)
