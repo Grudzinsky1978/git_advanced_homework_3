@@ -4,8 +4,9 @@ from wtforms.validators import DataRequired, Email, Length, EqualTo
 
 
 class RegForm(FlaskForm):
-    u_name = StringField('Имя', validators=[DataRequired(), Length(min=2, max=30)])
     u_surname = StringField('Фамилия', validators=[DataRequired(), Length(min=2, max=30)])
+    u_name = StringField('Имя', validators=[DataRequired(), Length(min=2, max=30)])
+    u_patronymic = StringField('Отчество', validators=[DataRequired(), Length(min=1, max=30)])
     email = StringField('Email', validators=[DataRequired(), Email()])
     passw = PasswordField('Пароль', validators=[DataRequired(), Length(min=6)])
-    confirm_passw = PasswordField('Confirm Password', validators=[DataRequired(), EqualTo('passw')])
+    confirm_passw = PasswordField('Подтвердить пароль', validators=[DataRequired(), EqualTo('passw')])
