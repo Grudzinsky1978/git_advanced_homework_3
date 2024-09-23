@@ -36,3 +36,20 @@ flask init-db
 * `cd git_advanced_homework_3/`
 * Проверил `git remote -v`
 * Попросил requirements.txt
+* Обновил данные `git pull`
+* `python -m venv .venv`
+* `.venv/Scripts/activate`
+* `pip install -r requirements.txt`
+* Создание ветки `git switch -c 1-add-field`
+* Выполнение задания
+* Коммит
+* Отправка ветки `git push -u origin 1-add-field`
+* Сделал pull request в удалённом репозитории
+* Назначил на тимлида
+
+## Тимлид
+* Проверил, слил ветку, удалил слитую ветку в удалённом репозитории
+* git pull
+* Коммит
+* git push
+
