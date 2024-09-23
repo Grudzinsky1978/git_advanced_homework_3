@@ -32,14 +32,15 @@ def init_db():
 def reg():
     form = RegForm()
     if request.method == 'POST' and form.validate():
-        u_name = form.u_name.data
         u_surname = form.u_surname.data
+        u_name = form.u_name.data
+        u_patronymic = form.u_patronymic.data
         email = form.email.data
         passw = form.passw.data
-        user = User(u_name=u_name, u_surname=u_surname, email=email, passw=passw)
+        user = User(u_surname=u_surname, u_name=u_name, u_patronymic=u_patronymic, email=email, passw=passw)
         db.session.add(user)
         db.session.commit()
-        return f'{u_surname} {u_name}, вы успешно заргистрировались!'
+        return f'{u_name} {u_patronymic} {u_surname}, вы успешно заргистрировались!'
     return render_template('reg.html', form=form)
 
 
