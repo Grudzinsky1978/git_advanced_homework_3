@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect
 from model import db, User
 from flask_wtf.csrf import CSRFProtect
+from flask_sqlalchemy import SQLAlchemy
 
 from form import RegForm
 
@@ -44,3 +45,5 @@ def reg():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+# flask init-db
